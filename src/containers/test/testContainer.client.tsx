@@ -2,7 +2,7 @@
 import { useTestStore } from '@/states/testStore'
 import styles from './test.module.scss'
 import React from 'react'
-import { FontBold } from '../../../public/svgs'
+import { FontBold } from '@/public/svgs'
 
 const TestContainerClient = () => {
   const { testStr } = useTestStore()
