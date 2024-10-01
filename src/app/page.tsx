@@ -1,6 +1,6 @@
 import Image from "next/image"
 import styles from "./page.module.css"
-import TestContainerClient from "@/containers/testContainer.client"
+import TestContainerClient from "@/containers/test/testContainer.client"
 
 export default function Home() {
   return (
