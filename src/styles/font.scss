@@ -33,7 +33,10 @@ $line-height-token: (
 
 // Font List
 
-@mixin body_lg-b {
+@mixin heading_lg-b {
+}
+
+@mixin body-lg-b {
   font-size: font-size('body_lg');
   font-weight: font-weight('bold');
   line-height: font-line-height('default');

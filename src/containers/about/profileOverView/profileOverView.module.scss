@@ -1,0 +1,21 @@
+@use '@/styles' as *;
+
+.profile-box {
+  display: flex;
+  gap: 16px;
+
+  &-img {
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+  }
+}
+
+.contents-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+  }
+}
