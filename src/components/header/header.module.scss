@@ -1,0 +1,27 @@
+@use '@/styles' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 65px;
+}
+
+.log {
+  &-font {
+    @include body_lg-b;
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 36px;
+  padding: 9px 0;
+
+  &-font {
+    text-decoration-line: none;
+    @include caption-lg-m;
+    color: $black;
+  }
+}
