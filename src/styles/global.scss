@@ -1,5 +1,13 @@
 @use '@/styles' as *;
 
 :root {
-  color: $white;
+  @each $name, $value in $colors {
+    --color-#{$name}: #{$value};
+  }
+
+  @each $category, $colors in $theme {
+    @each $shade, $value in $colors {
+      --theme-#{$category}-#{$shade}: #{$value};
+    }
+  }
 }

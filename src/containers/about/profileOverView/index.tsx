@@ -15,7 +15,10 @@ const ProfileOverView = () => {
       </div>
       <div className={styles['contents-box']}>
         <h2>Eppo</h2>
-        <p>내가 짱이야 ㅇ_ㅇ</p>
+        <p>
+          {`web & mobile Frontend Developer
+        Seoul, KR`}
+        </p>
       </div>
     </section>
   )

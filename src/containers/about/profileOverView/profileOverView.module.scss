@@ -17,5 +17,12 @@
   justify-content: center;
 
   h2 {
+    @include heading-sm-b;
+  }
+
+  p {
+    @include body-sm-m;
+    color: var(--color-desc-color);
+    white-space: pre-line;
   }
 }

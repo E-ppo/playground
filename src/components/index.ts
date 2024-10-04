@@ -1,3 +1,4 @@
 import Header from './header'
+import Chip from './chip'
 
-export { Header }
+export { Header, Chip }
