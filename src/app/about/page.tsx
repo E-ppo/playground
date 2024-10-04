@@ -1,12 +1,23 @@
 import React from 'react'
 import styles from './aboutPage.module.scss'
 import { ProfileOverView } from '@/containers/about'
+import LableTagList from '@/components/labelTagList'
 
 const page = () => {
+  const skillList = [
+    'JavaScript',
+    'TypeScript',
+    'React',
+    'Reac-Native',
+    'Next.js',
+    'SCSS',
+    'StyledComponents',
+  ]
+
   return (
     <article className={styles[`about-page`]}>
       <ProfileOverView />
-      어바웃page
+      <LableTagList label={'skills'} tags={skillList} />
     </article>
   )
 }

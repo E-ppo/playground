@@ -33,12 +33,33 @@ $line-height-token: (
 
 // Font List
 
-@mixin heading_lg-b {
+@mixin heading-lg-b {
+  font-size: font-size(('heading_lg'));
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}
+
+@mixin heading-sm-b {
+  font-size: font-size(('heading_sm'));
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
 }
 
 @mixin body-lg-b {
   font-size: font-size('body_lg');
   font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}
+
+@mixin body-sm-m {
+  font-size: font-size('body_sm');
+  font-weight: font-weight('medium');
+  line-height: font-line-height('default');
+}
+
+@mixin body-sm-r {
+  font-size: font-size('body_sm');
+  font-weight: font-weight('regular');
   line-height: font-line-height('default');
 }
 
