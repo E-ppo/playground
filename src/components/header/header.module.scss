@@ -19,7 +19,7 @@ $circle-final-size: 375px;
   position: absolute;
   top: 50%;
   @include circle(2px);
-  background-color: $brand;
+  background-color: var(--theme-brand-default);
   z-index: 0;
 }
 
@@ -45,7 +45,7 @@ $circle-final-size: 375px;
   justify-content: space-between;
   padding: $header-padding;
   height: $header-height;
-  border-bottom: 1px solid $lineGray;
+  border-bottom: 1px solid var(--color-line-gray);
 }
 
 .logo {
@@ -70,7 +70,7 @@ $circle-final-size: 375px;
     border-radius: 50px;
     text-decoration: none;
     @include caption-lg-m;
-    color: $black;
+    color: var(--color-black);
     transition: color $animation-duration ease;
 
     span {
@@ -95,7 +95,7 @@ $circle-final-size: 375px;
 
     &:hover,
     &.hover {
-      color: white;
+      color: var(--color-white);
 
       &::before {
         animation: criss-cross-left $animation-duration forwards;
