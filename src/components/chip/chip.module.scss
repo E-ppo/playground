@@ -1,0 +1,22 @@
+@use '@/styles/font' as *;
+
+.chip {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 16px;
+  background-color: var(--color-background-gray);
+  color: var(--color-black);
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: default;
+  @include caption-lg-m;
+}
+
+.chip[role='button'] {
+  cursor: pointer;
+}
+
+.chip[role='button']:hover,
+.chip[role='button']:focus {
+  background-color: #d0d0d0;
+}
