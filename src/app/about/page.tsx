@@ -17,7 +17,7 @@ const page = () => {
   return (
     <article className={styles[`about-page`]}>
       <ProfileOverView />
-      <LableTagList label={'skills'} tags={skillList} />
+      <LableTagList label={'Skills'} tags={skillList} />
     </article>
   )
 }
