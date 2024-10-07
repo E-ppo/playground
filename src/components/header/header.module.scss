@@ -49,8 +49,10 @@ $circle-final-size: 375px;
 }
 
 .logo {
+  text-decoration: none;
   p {
     @include body-lg-b;
+    color: var(--color-black);
   }
 }
 
