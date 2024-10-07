@@ -1,0 +1,82 @@
+$size-token: (
+  'titme_lg': 36px,
+  'title_sm': 30px,
+  'heading_lg': 24px,
+  'heading_sm': 20px,
+  'body_lg': 18px,
+  'body_sm': 16px,
+  'caption_lg': 14px,
+  'caption_sm': 12px,
+);
+
+$weight-token: (
+  'bold': 700,
+  'medium': 500,
+  'regular': 400,
+);
+
+$line-height-token: (
+  'default': 140%,
+);
+
+@function font-size($name) {
+  @return map-get($size-token, $name);
+}
+
+@function font-weight($name) {
+  @return map-get($weight-token, $name);
+}
+
+@function font-line-height($name) {
+  @return map-get($line-height-token, $name);
+}
+
+// Font List
+
+@mixin heading-lg-b {
+  font-size: font-size(('heading_lg'));
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}
+
+@mixin heading-sm-b {
+  font-size: font-size(('heading_sm'));
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}
+
+@mixin body-lg-b {
+  font-size: font-size('body_lg');
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}
+
+@mixin body-sm-m {
+  font-size: font-size('body_sm');
+  font-weight: font-weight('medium');
+  line-height: font-line-height('default');
+}
+
+@mixin body-sm-r {
+  font-size: font-size('body_sm');
+  font-weight: font-weight('regular');
+  line-height: font-line-height('default');
+}
+
+@mixin caption-lg-b {
+  font-size: font-size('caption_lg');
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}
+
+@mixin caption-lg-m {
+  font-size: font-size('caption_lg');
+  font-weight: font-weight('medium');
+  line-height: font-line-height('default');
+}
+
+@mixin caption-sm-b {
+  font-size: font-size('caption_sm');
+  font-weight: font-weight('bold');
+  line-height: font-line-height('default');
+}

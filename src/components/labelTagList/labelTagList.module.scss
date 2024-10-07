@@ -1,0 +1,15 @@
+@use '@/styles' as *;
+
+.label-box {
+  padding: 20px 0 12px 0;
+
+  label {
+    @include heading-sm-b;
+  }
+}
+
+.chip-list {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
