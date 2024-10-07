@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './header.module.scss'
+import Link from 'next/link'
 
 const Logo = () => {
   return (
-    <div className={styles.logo}>
+    <Link href={'/'} className={styles.logo}>
       <p>Eppo Playgroud</p>
-    </div>
+    </Link>
   )
 }
 
