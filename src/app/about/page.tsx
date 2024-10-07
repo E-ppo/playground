@@ -2,22 +2,22 @@ import React from 'react'
 import styles from './aboutPage.module.scss'
 import { ProfileOverView } from '@/containers/about'
 import LableTagList from '@/components/labelTagList'
+import LabelItemList from '@/components/labelItemList'
+import {
+  education,
+  skillList,
+  workExperience,
+} from '../constants/aboutConstant'
 
 const page = () => {
-  const skillList = [
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Reac-Native',
-    'Next.js',
-    'SCSS',
-    'StyledComponents',
-  ]
-
   return (
     <article className={styles[`about-page`]}>
       <ProfileOverView />
-      <LableTagList label={'Skills'} tags={skillList} />
+      <section className={styles.content}>
+        <LableTagList label="Skills" tags={skillList} />
+        <LabelItemList label="Work Experience" items={workExperience} />
+        <LabelItemList label="Education" items={education} />
+      </section>
     </article>
   )
 }

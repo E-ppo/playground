@@ -1,3 +1,5 @@
-import FontBold from './font-bold.svg'
+import fontBold from './font-bold.svg'
+import workBag from './work-bag.svg'
+import graduationCap from './graduation-cap.svg'
 
-export { FontBold }
+export { fontBold, workBag, graduationCap }
