@@ -45,6 +45,12 @@ $line-height-token: (
   line-height: font-line-height('default');
 }
 
+@mixin heading-sm-m {
+  font-size: font-size(('heading_sm'));
+  font-weight: font-weight('medium');
+  line-height: font-line-height('default');
+}
+
 @mixin body-lg-b {
   font-size: font-size('body_lg');
   font-weight: font-weight('bold');
