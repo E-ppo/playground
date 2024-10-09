@@ -1,43 +1,7 @@
 @use '@/styles' as *;
 
-$nav-item-width: 80px;
-$nav-item-padding: 5px;
-$nav-gap: 26px;
 $header-height: 65px;
 $header-padding: 0 40px;
-$animation-duration: 0.5s;
-$circle-final-size: 375px;
-
-@mixin circle($size) {
-  width: $size;
-  height: $size;
-  border-radius: 50%;
-}
-
-@mixin pseudo-element {
-  content: '';
-  position: absolute;
-  top: 50%;
-  @include circle(2px);
-  background-color: var(--theme-brand-default);
-  z-index: 0;
-}
-
-@mixin criss-cross-animation($direction) {
-  @keyframes criss-cross-#{$direction} {
-    0% {
-      #{$direction}: -20px;
-    }
-    50% {
-      #{$direction}: 50%;
-      @include circle(15px);
-    }
-    100% {
-      #{$direction}: 50%;
-      @include circle($circle-final-size);
-    }
-  }
-}
 
 .header {
   display: flex;
@@ -55,59 +19,3 @@ $circle-final-size: 375px;
     color: var(--color-black);
   }
 }
-
-.nav {
-  display: flex;
-  gap: $nav-gap;
-  padding: 9px 0;
-
-  a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: $nav-item-width;
-    padding: $nav-item-padding 0;
-    border-radius: 50px;
-    text-decoration: none;
-    @include caption-lg-m;
-    color: var(--color-black);
-    transition: color $animation-duration ease;
-
-    span {
-      position: relative;
-      z-index: 2;
-    }
-
-    &::before,
-    &::after {
-      @include pseudo-element;
-    }
-
-    &::before {
-      left: -20px;
-      transform: translate(-50%, -50%);
-    }
-
-    &::after {
-      right: -20px;
-      transform: translate(50%, -50%);
-    }
-
-    &:hover,
-    &.hover {
-      color: var(--color-white);
-
-      &::before {
-        animation: criss-cross-left $animation-duration forwards;
-      }
-      &::after {
-        animation: criss-cross-right $animation-duration forwards;
-      }
-    }
-  }
-}
-
-@include criss-cross-animation('left');
-@include criss-cross-animation('right');

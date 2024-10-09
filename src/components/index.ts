@@ -3,6 +3,7 @@ import Header from './header'
 import SvgIcon from './SvgIcon'
 import Editor from './editor'
 import OverView from './overView'
-import button from './button'
+import Button from './button'
+import NavList from './navList'
 
-export { Header, SvgIcon, Editor, OverView, button }
+export { Header, SvgIcon, Editor, OverView, Button, NavList }

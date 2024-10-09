@@ -1,17 +1,15 @@
 import React from 'react'
 import Link from 'next/link'
+import styles from './nav-list.module.scss'
 
-import styles from './header.module.scss'
+interface Props {
+  list: readonly { title: string; router: string }[]
+}
 
-const NavList = () => {
-  const navListItem = [
-    { title: 'About', router: '/about' },
-    { title: 'Portfolio', router: '/portfolio' },
-    { title: 'Blog', router: '/blog' },
-  ]
+const NavList = ({ list }: Props) => {
   return (
     <nav className={styles.nav}>
-      {navListItem.map((item, index) => (
+      {list.map((item, index) => (
         <Link
           href={item.router}
           key={`${item.title}_${index}`}
