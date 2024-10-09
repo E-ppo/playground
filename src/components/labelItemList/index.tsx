@@ -1,6 +1,5 @@
 import React from 'react'
-import styles from './labelItemList.module.scss'
-import { KeyOfIcon } from '@/types/svgIconTypes'
+import styles from './labe-iItem-list.module.scss'
 import { itemTypes } from './types'
 import ListItem from './ListItem'
 

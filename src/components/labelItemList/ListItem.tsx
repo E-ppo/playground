@@ -1,7 +1,7 @@
 import React from 'react'
 import SvgIcon from '../SvgIcon'
 import { itemTypes } from './types'
-import styles from './labelItemList.module.scss'
+import styles from './labe-iItem-list.module.scss'
 
 const ListItem = ({ icon, contents, leftText }: itemTypes) => {
   const { title, description } = contents

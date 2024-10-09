@@ -1,0 +1,12 @@
+@use '@/styles' as *;
+
+.editor-page-container {
+  padding: 20px 160px;
+}
+
+.title-input {
+  @include heading-sm-m;
+  width: 100%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--color-line-gray);
+}
