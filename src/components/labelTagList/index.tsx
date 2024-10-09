@@ -4,7 +4,7 @@ import Chip from '../chip'
 
 interface Props {
   label: string
-  tags: string[]
+  tags: readonly string[]
 }
 
 const LableTagList = ({ label, tags }: Props) => {
@@ -14,11 +14,11 @@ const LableTagList = ({ label, tags }: Props) => {
         <label>{label}</label>
       </div>
       <ul className={styles[`chip-list`]}>
-        {tags.map((item, index) => (
+        {/* {tags.map((item, index) => (
           <li key={`${item}_${index}`}>
             <Chip>{item}</Chip>
           </li>
-        ))}
+        ))} */}
       </ul>
     </section>
   )
