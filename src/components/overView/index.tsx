@@ -19,11 +19,7 @@ const OverView = ({ img, title, description, button }: Props) => {
     <section className={styles[`profile-box`]}>
       <div>
         {img && (
-          <Image
-            className={styles[`profile-box-img`]}
-            src={img}
-            alt="character"
-          />
+          <Image className={styles[`profile-box-img`]} src={img} alt="img" />
         )}
       </div>
       <div className={styles['contents-box']}>

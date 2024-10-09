@@ -1,5 +1,5 @@
 'use client'
-import { OverView, SvgIcon } from '@/components'
+import { OverView } from '@/components'
 import { blogOverViewInfo } from '@/constants/blog'
 import React from 'react'
 
@@ -8,10 +8,9 @@ const BlogOverView = () => {
 
   return (
     <section style={{ display: 'flex', alignItems: 'center' }}>
-      <SvgIcon name="graduationCap" />
       <OverView
         title={title}
-        // img={img}
+        img={img}
         description={description}
         button={button}
       />
