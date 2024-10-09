@@ -7,7 +7,7 @@ const BlogOverView = () => {
   const { title, img, description, button } = blogOverViewInfo
 
   return (
-    <section style={{ display: 'flex', alignItems: 'center' }}>
+    <section>
       <OverView
         title={title}
         img={img}
