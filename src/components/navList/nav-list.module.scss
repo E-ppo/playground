@@ -42,6 +42,11 @@ $circle-final-size: 375px;
   gap: $nav-gap;
   padding: 9px 0;
 
+  .nav-font.active {
+    background-color: var(--theme-brand-default);
+    color: var(--color-white);
+  }
+
   a {
     position: relative;
     display: flex;
@@ -96,7 +101,12 @@ $circle-final-size: 375px;
 .tab-bar {
   display: flex;
   gap: $nav-gap;
-  // width: 200px;
+
+  .nav-font.active {
+    color: #c8a755;
+    border-bottom: 2px solid #c8a755;
+  }
+
   a {
     padding: 10px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.3);

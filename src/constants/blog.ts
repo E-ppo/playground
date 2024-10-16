@@ -11,8 +11,8 @@ export const blogOverViewInfo = {
 } as const
 
 export const blogNavListItem = [
-  { title: 'React.js', router: '/blog/about' },
-  { title: 'Next.js', router: '/blog/about' },
-  { title: 'React-Native', router: '/blog/portfolio' },
+  { title: 'React.js', router: '/blog/react' },
+  { title: 'Next.js', router: '/blog/next' },
+  { title: 'React-Native', router: '/blog/react-native' },
   { title: 'ㅇ_ㅇㅋ', router: '/blog/ddd' },
 ] as const
