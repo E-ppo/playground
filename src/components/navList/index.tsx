@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import styles from './nav-list.module.scss'
+import { usePathname } from 'next/navigation'
 
 interface Props {
   list: readonly { title: string; router: string }[]
