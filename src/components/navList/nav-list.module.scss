@@ -37,7 +37,7 @@ $circle-final-size: 375px;
   }
 }
 
-.nav {
+.dynamic-circle {
   display: flex;
   gap: $nav-gap;
   padding: 9px 0;
@@ -92,3 +92,37 @@ $circle-final-size: 375px;
 
 @include criss-cross-animation('left');
 @include criss-cross-animation('right');
+
+.tab-bar {
+  display: flex;
+  gap: $nav-gap;
+  // width: 200px;
+  a {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    text-decoration: none;
+    color: var(--color-black);
+
+    &:before {
+      position: absolute;
+      white-space: nowrap;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      padding: 10px 0;
+      max-width: 0;
+      border-bottom: 2px solid #c8a755;
+      color: #c8a755;
+      content: attr(data-hover);
+      transition: max-width 0.5s;
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        max-width: 100%;
+      }
+    }
+  }
+}

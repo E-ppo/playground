@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Logo />
-      <NavList list={navListItem} />
+      <NavList list={navListItem} variant="dynamic-circle" />
     </header>
   )
 }

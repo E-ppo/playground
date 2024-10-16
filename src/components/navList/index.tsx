@@ -4,11 +4,12 @@ import styles from './nav-list.module.scss'
 
 interface Props {
   list: readonly { title: string; router: string }[]
+  variant?: 'dynamic-circle' | 'tab-bar'
 }
 
-const NavList = ({ list }: Props) => {
+const NavList = ({ list, variant = 'dynamic-circle' }: Props) => {
   return (
-    <nav className={styles.nav}>
+    <nav className={styles[variant]}>
       {list.map((item, index) => (
         <Link
           href={item.router}
