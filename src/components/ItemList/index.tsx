@@ -23,8 +23,6 @@ const getItemType = (children: React.ReactNode) => {
 const ItemList = ({ label, children }: ItemListProps) => {
   const itemType = getItemType(children)
 
-  console.log(itemType)
-
   return (
     <section>
       {label && (
