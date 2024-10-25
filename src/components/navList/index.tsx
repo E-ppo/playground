@@ -15,9 +15,9 @@ interface Props {
   isActiveFunc?: (pathname: string, itemPath: string) => boolean
 }
 
-const defaultIsActive = (pathname: string, itemPath: string) => {
+const defaultIsActive = (pathName: string, itemPath: string) => {
   // 정확히 일치하거나, 중첩 라우트의 시작 부분과 일치하는지 확인
-  return pathname === itemPath || pathname.startsWith(`${itemPath}/`)
+  return pathName === itemPath || pathName.startsWith(`${itemPath}/`)
 }
 
 const NavList: React.FC<Props> = ({
@@ -25,12 +25,12 @@ const NavList: React.FC<Props> = ({
   variant = 'dynamic-circle',
   isActiveFunc = defaultIsActive,
 }) => {
-  const pathname = usePathname()
+  const pathName = usePathname()
 
   const navItems = useMemo(
     () =>
       list.map((item, index) => {
-        const isActive = isActiveFunc(pathname, item.router)
+        const isActive = isActiveFunc(pathName, item.router)
         return (
           <Link
             href={item.router}
@@ -42,7 +42,7 @@ const NavList: React.FC<Props> = ({
           </Link>
         )
       }),
-    [list, pathname, isActiveFunc],
+    [list, pathName, isActiveFunc],
   )
 
   return <nav className={styles[variant]}>{navItems}</nav>
