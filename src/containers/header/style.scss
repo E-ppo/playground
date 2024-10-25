@@ -1,0 +1,9 @@
+@use '@/styles' as *;
+
+.logo {
+  text-decoration: none;
+  p {
+    @include body-lg-b;
+    color: var(--color-black);
+  }
+}

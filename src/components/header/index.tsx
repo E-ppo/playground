@@ -1,14 +1,14 @@
-import React from 'react'
-import Logo from './Logo'
+import React, { HTMLAttributes } from 'react'
 import styles from './header.module.scss'
-import NavList from '../navList'
-import { navListItem } from '@/constants/header'
 
-const Header = () => {
+const Header = ({
+  children,
+  className,
+  ...rest
+}: HTMLAttributes<HTMLElement>) => {
   return (
-    <header className={styles.header}>
-      <Logo />
-      <NavList list={navListItem} variant="dynamic-circle" />
+    <header className={`${styles.header} ${className || ''}`} {...rest}>
+      {children}
     </header>
   )
 }

@@ -11,11 +11,3 @@ $header-padding: 0 40px;
   height: $header-height;
   border-bottom: 1px solid var(--color-line-gray);
 }
-
-.logo {
-  text-decoration: none;
-  p {
-    @include body-lg-b;
-    color: var(--color-black);
-  }
-}
