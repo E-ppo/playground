@@ -1,4 +1,4 @@
-import { itemTypes } from '@/components/labelItemList/types'
+import { itemTypes } from '@/components/ItemList/types'
 import charImage from '@/public/img/eppo-char.webp'
 
 export const skillList = [
