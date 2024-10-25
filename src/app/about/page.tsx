@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from './about-page.module.scss'
-import LableTagList from '@/components/labelTagList'
-import LabelItemList from '@/components/labelItemList'
+import ItemList from '@/components/ItemList'
 import {
   education,
   profileOverViewInfo,
@@ -16,9 +15,31 @@ const page = () => {
     <article className={styles['about-page']}>
       <OverView img={img} title={title} description={description} />
       <section className={styles.content}>
-        <LableTagList label="Skills" tags={skillList} />
-        <LabelItemList label="Work Experience" items={workExperience} />
-        <LabelItemList label="Education" items={education} />
+        <ItemList label="Skill">
+          {skillList.map((item, idx) => (
+            <ItemList.Chip key={`${item}_${idx}`}>{item}</ItemList.Chip>
+          ))}
+        </ItemList>
+        <ItemList label="Work Experience">
+          {workExperience.map((item, idx) => (
+            <ItemList.Item
+              key={`${item}_${idx}`}
+              icon={item.icon}
+              contents={item.contents}
+              leftText={item.leftText}
+            />
+          ))}
+        </ItemList>
+        <ItemList label="Education">
+          {education.map((item, idx) => (
+            <ItemList.Item
+              key={`${item}_${idx}`}
+              icon={item.icon}
+              contents={item.contents}
+              leftText={item.leftText}
+            />
+          ))}
+        </ItemList>
       </section>
     </article>
   )
