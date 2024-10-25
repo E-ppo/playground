@@ -1,7 +1,8 @@
-import React from 'react'
-
-const page = () => {
-  return <div>블로그page</div>
+export default function BlogPage() {
+  return (
+    <div>
+      <h1>Category: react</h1>
+      <p>Here are the posts for react</p>
+    </div>
+  )
 }
-
-export default page

@@ -1,22 +1,45 @@
 import React from 'react'
-import styles from './aboutPage.module.scss'
-import { ProfileOverView } from '@/containers/about'
-import LableTagList from '@/components/labelTagList'
-import LabelItemList from '@/components/labelItemList'
+import styles from './about-page.module.scss'
+import ItemList from '@/components/ItemList'
 import {
   education,
+  profileOverViewInfo,
   skillList,
   workExperience,
-} from '../constants/aboutConstant'
+} from '../../constants/about'
+import { OverView } from '@/components'
 
 const page = () => {
+  const { img, title, description } = profileOverViewInfo
   return (
-    <article className={styles[`about-page`]}>
-      <ProfileOverView />
+    <article className={styles['about-page']}>
+      <OverView img={img} title={title} description={description} />
       <section className={styles.content}>
-        <LableTagList label="Skills" tags={skillList} />
-        <LabelItemList label="Work Experience" items={workExperience} />
-        <LabelItemList label="Education" items={education} />
+        <ItemList label="Skill">
+          {skillList.map((item, idx) => (
+            <ItemList.Chip key={`${item}_${idx}`}>{item}</ItemList.Chip>
+          ))}
+        </ItemList>
+        <ItemList label="Work Experience">
+          {workExperience.map((item, idx) => (
+            <ItemList.Item
+              key={`${item}_${idx}`}
+              icon={item.icon}
+              contents={item.contents}
+              leftText={item.leftText}
+            />
+          ))}
+        </ItemList>
+        <ItemList label="Education">
+          {education.map((item, idx) => (
+            <ItemList.Item
+              key={`${item}_${idx}`}
+              icon={item.icon}
+              contents={item.contents}
+              leftText={item.leftText}
+            />
+          ))}
+        </ItemList>
       </section>
     </article>
   )

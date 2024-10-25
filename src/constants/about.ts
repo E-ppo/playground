@@ -1,5 +1,5 @@
-import { itemTypes } from '@/components/labelItemList/types'
-import { KeyOfIcon } from '@/types/svgIconTypes'
+import { itemTypes } from '@/components/ItemList/types'
+import charImage from '@/public/img/eppo-char.webp'
 
 export const skillList = [
   'JavaScript',
@@ -54,3 +54,9 @@ export const education: itemTypes[] = [
     },
   },
 ] as const
+
+export const profileOverViewInfo = {
+  img: charImage,
+  title: 'Eppo',
+  description: `web & mobile Frontend Developer \nSeoul, KR`,
+} as const

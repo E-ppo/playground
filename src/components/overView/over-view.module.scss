@@ -2,6 +2,7 @@
 
 .profile-box {
   display: flex;
+  align-items: center;
   gap: 16px;
 
   &-img {
@@ -25,4 +26,8 @@
     color: var(--color-desc-color);
     white-space: pre-line;
   }
+}
+
+.button-box {
+  margin-left: auto;
 }

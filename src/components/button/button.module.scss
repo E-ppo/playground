@@ -1,0 +1,67 @@
+$primary-color: var(--color-brand);
+$secondary-color: var(--color-background-gray);
+$white: #ffffff;
+
+@mixin button-size($padding-y, $padding-x, $font-size) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+}
+
+.button {
+  white-space: nowrap;
+
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba($primary-color, 0.25);
+  }
+
+  &:disabled {
+    opacity: 0.65;
+    pointer-events: none;
+  }
+}
+
+.button--primary {
+  color: $white;
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover:not(:disabled) {
+    filter: brightness(90%);
+  }
+}
+
+.button--secondary {
+  color: #333;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  &:hover:not(:disabled) {
+    filter: brightness(90%);
+  }
+}
+
+.button--sm {
+}
+
+.button--md {
+  height: 40px;
+  border-radius: 20px;
+  padding: 9px 44px;
+}
+
+.button--large {
+}
+
+.button[href] {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+a.button:focus {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}

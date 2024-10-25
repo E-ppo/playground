@@ -1,13 +1,14 @@
-import React from 'react'
-import NavList from './NavList'
-import Logo from './Logo'
+import React, { HTMLAttributes } from 'react'
 import styles from './header.module.scss'
 
-const Header = () => {
+const Header = ({
+  children,
+  className,
+  ...rest
+}: HTMLAttributes<HTMLElement>) => {
   return (
-    <header className={styles.header}>
-      <Logo />
-      <NavList />
+    <header className={`${styles.header} ${className || ''}`} {...rest}>
+      {children}
     </header>
   )
 }
