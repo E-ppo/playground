@@ -1,17 +1,17 @@
 'use client'
 import styles from './modal.module.scss'
-import { useModal } from './modal-context'
+import { useModal } from './ModalContext'
 import type { ModalCommonProps } from './types'
 
-const Header = ({ children }: ModalCommonProps) => {
+const ModalHeader = ({ children }: ModalCommonProps) => {
   return <div className={styles.header}>{children}</div>
 }
 
-const Title = ({ children }: ModalCommonProps) => {
+const ModalTitle = ({ children }: ModalCommonProps) => {
   return <h2 className={styles.title}>{children}</h2>
 }
 
-const CloseButton = () => {
+const ModalCloseButton = () => {
   const { onClose } = useModal()
   return (
     <button
@@ -24,5 +24,5 @@ const CloseButton = () => {
   )
 }
 
-export default Header
-export { CloseButton, Title }
+export default ModalHeader
+export { ModalTitle, ModalCloseButton }

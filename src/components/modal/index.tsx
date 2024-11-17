@@ -1,13 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { ModalContext } from './modal-context'
+import { ModalContext } from './ModalContext'
 
 import type { ModalCommonProps } from './types'
-import Trigger from './modal-trigger'
-import Content from './modal-content'
-import Header from '../header'
-import { CloseButton, Title } from './modal-header'
+
+import { ModalCloseButton, ModalTitle } from './ModalHeader'
+import ModalTrigger from './ModalTrigger'
+import ModalContent from './ModalContent'
 
 const Modal = ({ children }: ModalCommonProps) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -21,10 +21,10 @@ const Modal = ({ children }: ModalCommonProps) => {
   )
 }
 
-Modal.Trigger = Trigger
-Modal.Content = Content
-Modal.Header = Header
-Modal.Title = Title
-Modal.CloseButton = CloseButton
+Modal.Trigger = ModalTrigger
+Modal.Content = ModalContent
+Modal.Header = ModalContext
+Modal.Title = ModalTitle
+Modal.CloseButton = ModalCloseButton
 
 export { Modal }
