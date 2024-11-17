@@ -1,0 +1,81 @@
+@use '@/styles' as *;
+
+.login {
+  &-form {
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+
+    h1 {
+      text-align: center;
+      @include body-lg-b;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include caption-lg-b;
+
+    input {
+      padding: 10px;
+      border-radius: 10px;
+      background-color: var(--color-background-gray);
+    }
+  }
+
+  &__description {
+    @include caption-sm-m;
+    color: darkgray;
+    text-decoration: underline;
+    &-error {
+      margin-left: 10px;
+      @include caption-sm-m;
+      text-decoration: none;
+      color: var(--color-brand);
+    }
+  }
+
+  &__btn--submit {
+    cursor: pointer;
+    @include caption-lg-b;
+    width: 100%;
+    border-radius: 10px;
+    color: var(--color-white);
+    padding: 10px;
+    background-color: var(--color-desc-color);
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--color-background-gray);
+      color: darkgray;
+    }
+  }
+}
+
+.logout {
+  padding: 25px 50px;
+  display: flex;
+
+  &__btn--wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+
+    button {
+      background-color: var(--color-background-gray);
+      padding: 10px;
+      width: 80px;
+
+      &:hover {
+        background-color: var(--color-desc-color);
+        color: var(--color-white);
+      }
+    }
+  }
+}

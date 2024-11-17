@@ -1,16 +1,16 @@
 import React from 'react'
 import Logo from './Logo'
-import MyPageIcon from './MyPageIcon'
 import NavList from '@/components/navList'
 import { navListItem } from '@/constants/header'
+import Login from './login'
 
 const HeaderComponent = () => {
   return (
     <>
       <Logo />
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
         <NavList list={navListItem} />
-        <MyPageIcon />
+        <Login />
       </div>
     </>
   )

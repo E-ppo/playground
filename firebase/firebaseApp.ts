@@ -1,4 +1,7 @@
-import { initializeApp } from 'firebase/app'
+import { initializeApp, FirebaseApp, getApp } from 'firebase/app'
+import 'firebase/auth'
+
+export let customFirebaseApp: FirebaseApp
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
@@ -10,6 +13,12 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_MEASUREMENTID,
 }
 
-const app = initializeApp(firebaseConfig)
+try {
+  customFirebaseApp = getApp('app')
+} catch (error) {
+  customFirebaseApp = initializeApp(firebaseConfig, 'app')
+}
 
-export default app
+const firebase = initializeApp(firebaseConfig)
+
+export default firebase

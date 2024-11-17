@@ -86,3 +86,9 @@ $line-height-token: (
   font-weight: font-weight('bold');
   line-height: font-line-height('default');
 }
+
+@mixin caption-sm-m {
+  font-size: font-size('caption_sm');
+  font-weight: font-weight('medium');
+  line-height: font-line-height('default');
+}
