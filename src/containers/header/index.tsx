@@ -1,6 +1,5 @@
 import React from 'react'
 import Logo from './Logo'
-
 import NavList from '@/components/navList'
 import { navListItem } from '@/constants/header'
 import Mypage from './mypage'
