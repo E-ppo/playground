@@ -11,16 +11,12 @@ const ModalTitle = ({ children }: ModalCommonProps) => {
   return <h2 className={styles.title}>{children}</h2>
 }
 
-const ModalCloseButton = () => {
+const ModalCloseButton = ({ children }: ModalCommonProps) => {
   const { onClose } = useModal()
   return (
-    <button
-      onClick={onClose}
-      className={styles.closeButton}
-      aria-label="Close modal"
-    >
-      x
-    </button>
+    <div onClick={onClose} aria-label="Close modal">
+      {children}
+    </div>
   )
 }
 

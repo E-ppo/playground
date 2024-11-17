@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { getAuth, onAuthStateChanged, User } from 'firebase/auth'
+import { getAuth, onAuthStateChanged, User, signOut } from 'firebase/auth'
 import { customFirebaseApp } from '@/firebaseApp'
 
 export const useAuth = () => {
@@ -18,5 +18,14 @@ export const useAuth = () => {
     return () => unsubscribe()
   }, [])
 
-  return { user, loading }
+  const logout = async () => {
+    try {
+      await signOut(auth)
+      setUser(null)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  return { user, loading, logout }
 }
