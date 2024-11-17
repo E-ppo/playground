@@ -24,7 +24,7 @@
     input {
       padding: 10px;
       border-radius: 10px;
-      background-color: var(--color-line-gray);
+      background-color: var(--color-background-gray);
     }
   }
 
@@ -32,6 +32,12 @@
     @include caption-sm-m;
     color: darkgray;
     text-decoration: underline;
+    &-error {
+      margin-left: 10px;
+      @include caption-sm-m;
+      text-decoration: none;
+      color: var(--color-brand);
+    }
   }
 
   &__btn--submit {
@@ -42,5 +48,11 @@
     color: var(--color-white);
     padding: 10px;
     background-color: var(--color-desc-color);
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--color-background-gray);
+      color: darkgray;
+    }
   }
 }
