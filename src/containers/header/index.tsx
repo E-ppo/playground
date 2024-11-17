@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from './Logo'
 import NavList from '@/components/navList'
 import { navListItem } from '@/constants/header'
-import Mypage from './mypage'
+import Login from './login'
 
 const HeaderComponent = () => {
   return (
@@ -10,7 +10,7 @@ const HeaderComponent = () => {
       <Logo />
       <div style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
         <NavList list={navListItem} />
-        <Mypage />
+        <Login />
       </div>
     </>
   )

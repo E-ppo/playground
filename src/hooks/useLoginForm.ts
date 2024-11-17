@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react'
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 import { customFirebaseApp } from '@/firebaseApp'
@@ -13,7 +14,7 @@ interface UseLoginForm {
 export const useLoginForm = (): UseLoginForm => {
   const [email, setEmail] = useState<string>('')
   const [pw, setPw] = useState<string>('')
-  const [error, setError] = useState<string>(!email && !pw ? ' ' : '')
+  const [error, setError] = useState<string>(!email || !pw ? ' ' : '')
 
   const validateEmail = (value: string) => {
     const validRegex =
