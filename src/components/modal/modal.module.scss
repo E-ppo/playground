@@ -1,0 +1,48 @@
+.wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.2s;
+}
+
+.container {
+  position: relative;
+  z-index: 50;
+  width: 100%;
+  max-width: 32rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.closeButton {
+  padding: 0.25rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #f3f4f6;
+  }
+}
