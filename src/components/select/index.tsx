@@ -17,7 +17,6 @@ const Select = ({
   const [isOpen, setIsOpen] = useState(false)
   const selectRef = useRef<HTMLDivElement>(null)
 
-  // 외부 클릭 감지
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -32,7 +31,6 @@ const Select = ({
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
-  // 키보드 네비게이션
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' || e.key === ' ') {
       setIsOpen(!isOpen)
