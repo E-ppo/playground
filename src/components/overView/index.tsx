@@ -8,10 +8,7 @@ interface Props {
   img?: StaticImageData
   title: string
   description: string
-  button?: {
-    text: string
-    onClick: () => void
-  }
+  button?: React.JSX.Element
 }
 
 const OverView = ({ img, title, description, button }: Props) => {
@@ -26,9 +23,7 @@ const OverView = ({ img, title, description, button }: Props) => {
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
-      <div className={styles['button-box']}>
-        {button && <Button variant="secondary" text={button?.text} />}
-      </div>
+      <div className={styles['button-box']}>{button && button}</div>
     </section>
   )
 }
