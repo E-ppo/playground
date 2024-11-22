@@ -2,5 +2,6 @@ import bold from './bold.svg'
 import workBag from './work-bag.svg'
 import graduationCap from './graduation-cap.svg'
 import italic from './italic.svg'
+import statMinus from './stat-minus.svg'
 
-export { bold, workBag, graduationCap, italic }
+export { bold, workBag, graduationCap, italic, statMinus }

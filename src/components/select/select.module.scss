@@ -23,8 +23,15 @@
     border-color: #d1d1d1;
   }
 
+  .icon {
+    transition: transform 0.2s ease;
+  }
+
   &.open {
     border-color: #2563eb;
+    .icon {
+      transform: scaleY(-1);
+    }
   }
 }
 

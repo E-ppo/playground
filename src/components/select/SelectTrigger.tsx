@@ -1,5 +1,6 @@
 'use client'
 
+import SvgIcon from '../SvgIcon'
 import styles from './select.module.scss'
 import { useSelectContext } from './SelectContext'
 
@@ -21,7 +22,12 @@ const SelectTrigger = ({ placeholder = 'Select...' }: SelectTriggerProps) => {
       <span className={styles.value}>
         {selectedOption ? selectedOption.label : placeholder}
       </span>
-      <div>1</div>
+
+      <SvgIcon
+        name="statMinus"
+        color="#876370"
+        style={{ transform: isOpen ? 'scaleY(-1)' : 'scaleY(1)' }}
+      />
     </div>
   )
 }
