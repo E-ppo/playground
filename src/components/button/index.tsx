@@ -25,7 +25,7 @@ const Button = ({
 
   if (href) {
     return (
-      <Link href={href} passHref>
+      <Link href={href} passHref legacyBehavior>
         <a className={className} onClick={onClick} role="button" tabIndex={0}>
           {text}
         </a>
