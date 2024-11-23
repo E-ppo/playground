@@ -5,22 +5,27 @@ import StarterKit from '@tiptap/starter-kit'
 import { useState } from 'react'
 import Toolbar from './Toolbar'
 import styles from './editor.module.scss'
+import Image from '@tiptap/extension-image'
+import TextAlign from '@tiptap/extension-text-align'
 
 const Editor = () => {
   const [text, setText] = useState('Hello World!')
   const editor = useEditor({
-    extensions: [StarterKit],
+    extensions: [
+      StarterKit,
+      Image,
+      TextAlign.configure({
+        types: ['heading', 'paragraph'],
+        defaultAlignment: 'left',
+      }),
+    ],
     content: text,
     onUpdate({ editor }) {
       setText(editor.getHTML())
     },
-    editorProps: {
-      attributes: {
-        class:
-          'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl focus:outline-none',
-      },
-    },
   })
+
+  console.log(text)
 
   return (
     <div className={styles.editor}>
