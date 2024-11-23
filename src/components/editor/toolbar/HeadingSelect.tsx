@@ -1,9 +1,9 @@
 'use client'
 
 import { Editor } from '@tiptap/react'
-import { SelectOption } from '../select/types'
-import Select from '../select'
-import styles from './editor.module.scss'
+import { SelectOption } from '../../select/types'
+import Select from '../../select'
+import styles from '../editor.module.scss'
 
 interface HeadingSelectProps {
   editor: Editor | null
@@ -44,7 +44,6 @@ const HeadingSelect = ({ editor }: HeadingSelectProps) => {
       options={headingOptions}
       value={getCurrentHeadingLevel()}
       onChange={handleHeadingChange}
-      placeholder="본문을 입력해주세요"
     />
   )
 }

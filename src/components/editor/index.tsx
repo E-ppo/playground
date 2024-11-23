@@ -3,7 +3,7 @@
 import { useEditor, EditorContent } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { useState } from 'react'
-import Toolbar from './Toolbar'
+import Toolbar from './toolbar'
 import styles from './editor.module.scss'
 import Image from '@tiptap/extension-image'
 import TextAlign from '@tiptap/extension-text-align'
