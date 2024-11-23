@@ -1,7 +1,6 @@
 'use client'
 import React from 'react'
 import styles from '../editor.module.scss'
-import SvgIcon from '../../SvgIcon'
 import HeadingSelect from './HeadingSelect'
 import { EditorType } from '@/types/editorTypes'
 import BasicFormatButtons from './BasicFormatButtons'

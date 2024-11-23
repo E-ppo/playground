@@ -66,6 +66,27 @@
       }
     }
 
+    ol {
+      padding: 0 1rem;
+      margin: 1.25rem 1rem 1.25rem 0.4rem;
+      list-style-type: decimal;
+
+      li p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
+      ol {
+        list-style-type: lower-alpha;
+        margin: 0.5rem 0;
+        padding-left: 0.5rem; // 더 깊은 들여쓰기
+
+        ol {
+          list-style-type: lower-roman;
+          padding-left: 0.5rem; // 가장 깊은 레벨의 들여쓰기
+        }
+      }
+    }
+
     li.is-active {
       background-color: rgba(#2563eb, 0.1);
     }

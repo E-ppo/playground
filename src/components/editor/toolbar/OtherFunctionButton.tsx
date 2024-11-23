@@ -24,6 +24,12 @@ const OtherFunctionButton = ({ editor }: { editor: EditorType }) => {
       >
         <SvgIcon name="bulletList" color="#876370" size={30} />
       </button>
+      <button
+        onClick={() => editor.chain().focus().toggleOrderedList().run()}
+        className={editor.isActive('orderedList') ? 'is-active' : ''}
+      >
+        <SvgIcon name="listOl" color="#876370" size={30} />
+      </button>
     </>
   )
 }

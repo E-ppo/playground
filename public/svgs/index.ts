@@ -9,6 +9,7 @@ import formatLeft from './format-left.svg'
 import formatCenter from './format-center.svg'
 import bulletList from './bullet-list.svg'
 import doubleQuotes from './double-quotes.svg'
+import listOl from './list-ol.svg'
 
 export {
   bold,
@@ -22,4 +23,5 @@ export {
   formatLeft,
   bulletList,
   doubleQuotes,
+  listOl,
 }
