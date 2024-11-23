@@ -1,7 +1,7 @@
 'use client'
+import React from 'react'
 import SvgIcon from '@/components/SvgIcon'
 import { EditorType } from '@/types/editorTypes'
-import React from 'react'
 import styles from '../editor.module.scss'
 
 const BasicFormatButtons = ({ editor }: { editor: EditorType }) => {
@@ -23,7 +23,7 @@ const BasicFormatButtons = ({ editor }: { editor: EditorType }) => {
         onClick={() => editor.chain().focus().toggleStrike().run()}
         className={editor.isActive('strike') ? styles.isActive : ''}
       >
-        Strike
+        <span className={styles.strike}>T</span>
       </button>
     </>
   )

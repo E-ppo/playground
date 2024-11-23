@@ -25,7 +25,6 @@ const SelectTrigger = ({ placeholder = 'Select...' }: SelectTriggerProps) => {
 
       <SvgIcon
         name="statMinus"
-        color="#876370"
         style={{ transform: isOpen ? 'scaleY(-1)' : 'scaleY(1)' }}
       />
     </div>

@@ -7,6 +7,8 @@ import codeBlock from './code-block.svg'
 import formatRight from './format-right.svg'
 import formatLeft from './format-left.svg'
 import formatCenter from './format-center.svg'
+import bulletList from './bullet-list.svg'
+import doubleQuotes from './double-quotes.svg'
 
 export {
   bold,
@@ -18,4 +20,6 @@ export {
   formatCenter,
   formatRight,
   formatLeft,
+  bulletList,
+  doubleQuotes,
 }
